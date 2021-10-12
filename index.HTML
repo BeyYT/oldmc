@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Old MC!</title>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="favicon.ico" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.copy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  left: -10000px;
+}
+.mc-img {
+    position: relative; 
+    height: 400px;
+    width: 100%;
+}
+
+.mc-img-btn {
+    position: relative; 
+    height: 52px;
+    width: 200px;
+}
+
+.mc-img::before {    
+      content: '';
+      background-image: url('img.png');
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.15;
+}
+
+h1 {
+  position: relative;
+  color: #ffffff;  
+  line-height: 0.9;
+  text-align: center;
+}
+p {
+  position: relative;
+  color: #ffffff;  
+  line-height: 0.9;
+  text-align: center;
+}
+.coy {
+  background-image: url('img.png');
+  background-size: cover;
+  position: absolute;
+  opacity: 0.75;
+}
+
+.op40 {
+  opacity: 0.1;
+}
+
+</style>
+<body style="background-color:rgb(3, 3, 3);text-align:center">
+<!-- Header -->
+<p class="copy" id="copy">oldmc.beyyt.live</p>
+<header class="mc-img" style="padding:128px 16px">
+  <img class="w3-margin w3-text-white w3-jumbo no-op" src="logo.png"></img>
+  <p class="w3-xlarge w3-text-white no-op">A Minecraft Java 1.2.5 Server Hosted By BeyYT</p>
+  <button enabled style="color:white; " class="mc-img-btn w3-button w3-grey w3-text-light-grey w3-padding-large w3-large w3-margin-top" onclick="copyText(copy)">Copy Server IP</button> 
+</header>
+
+<p class="w3-xlarge w3-text-white"> Click On This Icon To Check The Server Status</p>
+<i style=color:white class="fa fa-tasks fa-5x w3-text-white w3-margin-right" onclick=location.href='https://mcsrvstat.us/server/oldmc.beyyt.live'></i>
+<!-- First Grid -->
+<div class="w3-container w3-black w3-text-white w3-center w3-padding-64">
+  <h1 style=color:white class="w3-jumbo w3-text-white">Old MC's Creation</h>
+  <h5 style=color:white class="w3-margin w3-opacity">Old MC Was Created For Players Who Fondly Remember Playing Minecrafct In 2011-2015 Or For People Who Check Out Old Versions For Enjoyment, Whatever The reason, Everyone is Welcome Here!</h5>
+</div>
+
+<div class="w3-container w3-black w3-text-white w3-center w3-padding-64">
+  <h1 style=color:white class="w3-jumbo w3-text-white">Donations</h>
+  <h5 style=color:white class="w3-margin w3-opacity">we accept donations over <a class="w3-text-blue" href="https://www.paypal.com/donate?hosted_button_id=64MZ59CCW5UNA">paypal</a> , any amount can help the server.</h5>
+  <h10 style=color:white class="op40">*any donation over 2$ usd will get a special donator rank within the server, please include a note with the donation with your ign so that we can give you the rank</h10>
+</div>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+ function copyText(element) {
+  var range, selection, worked;
+
+  if (document.body.createTextRange) {
+    range = document.body.createTextRange();
+    range.moveToElementText(element);
+    range.select();
+  } else if (window.getSelection) {
+    selection = window.getSelection();        
+    range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+  
+  try {
+    document.execCommand('copy');
+    alert('text copied');
+  }
+  catch (err) {
+    alert('unable to copy text');
+  }
+}
+</script>
+</body>
+</html>
